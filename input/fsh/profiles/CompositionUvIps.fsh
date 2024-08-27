@@ -71,7 +71,7 @@ The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-
     sectionAllergies 1..1 MS and
     sectionProblems 1..1 MS and
     sectionProceduresHx 0..1 MS and
-    sectionImmunizations 0..1 MS and
+    sectionImmunizations 1..1 MS and
     sectionMedicalDevices 0..1 MS and
     sectionResults 0..1 MS and
     sectionVitalSigns 0..1 and
