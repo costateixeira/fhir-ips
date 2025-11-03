@@ -103,6 +103,21 @@ This change list provides an overview and detail of changes from the STU 2.0 Bal
   - Change IPS Actor title from Producer to Creator ([FHIR-51417](https://jira.hl7.org/browse/FHIR-51417))
   - Clarify patient name guidance for alphabetic representation and family name ([FHIR-51419](https://jira.hl7.org/browse/FHIR-51419))
   - Place all "Considered for Future Use" Issues on "Known Issues and Future Development Page" ([FHIR-51514](https://jira.hl7.org/browse/FHIR-51514))
+  - Typo when referring to 'an Creator (IPS)' [FHIR-51745](https://jira.hl7.org/browse/FHIR-51745)
+  - Typographic and word clarity corrections [FHIR-51766](https://jira.hl7.org/browse/FHIR-51766)
+  - Typos and narrative consistency (Structure of IPS) [FHIR-51774](https://jira.hl7.org/browse/FHIR-51774)
+  - Missing Resources in CapabilityStatement [FHIR-51795](https://jira.hl7.org/browse/FHIR-51795)
+  - Adjustments to examples (Allergy and Procedure) [FHIR-51797](https://jira.hl7.org/browse/FHIR-51797)
+  - Remove details on CDA IPS specification [FHIR-51798](https://jira.hl7.org/browse/FHIR-51798)
+  - Add/adjust author names [FHIR-51799](https://jira.hl7.org/browse/FHIR-51799)
+  - Backticks for path expressions [FHIR-51851](https://jira.hl7.org/browse/FHIR-51851)  
+  - Adjust results status label [FHIR-51966](https://jira.hl7.org/browse/FHIR-51966)
+  - Correct CapabilityStatement-uv-ips operation definition for IPA $docref [FHIR-51968](https://jira.hl7.org/browse/FHIR-51968) 
+  - Various general principles pages grammar and typos [FHIR-51971](https://jira.hl7.org/browse/FHIR-51971) 
+  - Mandatory Composition elements obligation SHALL:populate [FHIR-51972](https://jira.hl7.org/browse/FHIR-51972) 
+  - Mandatory BundleUvIps elements obligation SHALL:populate [FHIR-51973](https://jira.hl7.org/browse/FHIR-51973) 
+  - MS on SpecimenUvIps type, subject and subject.reference [FHIR-51974](https://jira.hl7.org/browse/FHIR-51974) 
+  - Consistent use of normative verbs [FHIR-52013](https://jira.hl7.org/browse/FHIR-52013)
   
 ### STU 2.0.0-ballot Update
 

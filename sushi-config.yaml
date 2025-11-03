@@ -10,7 +10,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: pc
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 2
+    valueInteger: 3
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
 license: CC0-1.0
@@ -21,6 +21,16 @@ publisher:
   name: HL7 International / Patient Care
   url: http://www.hl7.org/Special/committees/patientcare
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+dependencies:
+  hl7.fhir.uv.ipa:
+    version: 1.1.0
+    uri: http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa
+definition: 
+  extension: 
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency
+      valueCode: hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  pin-canonicals: pin-multiples
 menu:
   Home: index.html
   Table of Contents: toc.html
@@ -37,17 +47,22 @@ menu:
     IPS Composition: StructureDefinition-Composition-uv-ips.html
     IPS Library (Profiles): profiles.html
     Actors: actors.html
+    CapabilityStatement: CapabilityStatement-ips-server.html
+    Operations: OperationDefinition-summary.html
     Datatypes: Data-Types-Defined-in-this-Guide.html
     Terminology: terminology.html
-    Operations: OperationDefinition-summary.html
+    Model: StructureDefinition-IPSSectionsLM-mappings.html
     Examples: examples.html
-    CapabilityStatement: CapabilityStatement-ips-server.html
   Support:
-    About: IG-analysis.html
+    About: About.html
     Downloads: downloads.html
     Copyrights: copyrights.html
   Change Log: changes.html
 resources:
+  Bundle/bundle-ips-all-sections:
+    name: 'Bundle - IPS with All Sections'
+    description: 'Bundle - IPS with All Sections'
+    exampleCanonical: http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
   Bundle/IPS-examples-Bundle-01:
     name: 'Bundle - IPS with Data'
     description: 'Bundle - IPS with Data'

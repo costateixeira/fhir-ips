@@ -1,7 +1,7 @@
 Instance: ips-server
 InstanceOf: CapabilityStatement
 Title: "IPS Server Capability Statement"
-Description: "This section describes the expected capabilities of the IPS Server actor which is responsible for providing responses to the queries submitted for IPS documents. The list of FHIR profiles and operations supported by IPS Servers are defined."
+Description: "This CapabilityStatement describes the expected capabilities of the IPS Server actor which is responsible for providing responses to the queries submitted for IPS documents. The list of FHIR profiles and operations supported by IPS Servers are defined in this CapabilityStatement."
 Usage: #definition
 * url = "http://hl7.org/fhir/uv/ips/CapabilityStatement/ips-server"
 * version = "1.1.0"
@@ -13,7 +13,7 @@ Usage: #definition
 * publisher = "HL7 International / Patient Care"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/patientcare"
-* description = "Capability Statement for IPS Server."
+* description = "This CapabilityStatement describes the expected capabilities of the [IPS Server actor](ActorDefinition-Server.html) which is responsible for providing responses to the queries submitted for IPS documents. The list of FHIR profiles and operations supported by IPS Servers are defined in this CapabilityStatement."
 * jurisdiction = $m49.htm#001
 * copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
 * kind = #requirements
@@ -69,7 +69,8 @@ Usage: #definition
 * rest.resource[+].type = #Device
 * rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips"
 * rest.resource[+].type = #DeviceUseStatement
 * rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
@@ -84,7 +85,7 @@ Usage: #definition
 * rest.resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].operation.extension.valueCode = #SHOULD
 * rest.resource[=].operation.name = "docref"
-* rest.resource[=].operation.definition = "https://hl7.org/fhir/uv/ipa/OperationDefinition-docref.html"
+* rest.resource[=].operation.definition = "http://hl7.org/fhir/uv/ipa/OperationDefinition/docref"
 * rest.resource[+].type = #Flag
 * rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
@@ -97,6 +98,9 @@ Usage: #definition
 * rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].supportedProfile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+* rest.resource[+].type = #ImmunizationRecommendation
+* rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension.valueCode = #MAY
 * rest.resource[+].type = #Medication
 * rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY

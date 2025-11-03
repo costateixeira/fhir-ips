@@ -19,11 +19,10 @@ It allows also providing details about the related study using the partOf elemen
 * obeys hasMemberOrComponent
 * partOf only Reference(ImagingStudyUvIps)
 * status from ResultsStatusUvIps (required)
-* status ^label = "Observation 'complete' status codes"
 * status ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * status ^binding.extension[=].valueString = "ObservationStatus"
 * category only CodeableConceptIPS
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"imaging\"."
@@ -107,23 +106,4 @@ It allows also providing details about the related study using the partOf elemen
 * component ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = "http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer"
 * component ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHOULD:display
 * component ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = "http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer"
-* component ^slicing.discriminator.type = #type
-* component ^slicing.discriminator.path = "value"
-* component ^slicing.description = "Slicing based on value[x] type."
-* component ^slicing.rules = #closed
-* component ^requirements = "Required if not(exists(Observation.valueString))"
-* component ^min = 0
-* component contains
-    observationCode 0..* and
-    observationTextOrMeasurement 0..*
-* component[observationCode] ^short = "Observation Code"
-* component[observationCode].code only CodeableConcept
-* component[observationCode].code from ResultsRadiologyObservationUvIps (preferred)
-* component[observationCode].value[x] 1..
-* component[observationCode].value[x] only CodeableConcept
-* component[observationTextOrMeasurement] ^short = "Observation Text or Measurement Values"
-* component[observationTextOrMeasurement].code only CodeableConcept
-* component[observationTextOrMeasurement].code from ResultsRadiologyMeasurementTextObservationUvIps (preferred)
-* component[observationTextOrMeasurement].code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* component[observationTextOrMeasurement].code ^binding.extension.valueString = "ObservationCode"
-* component[observationTextOrMeasurement].value[x] 1..
+* component.code from ResultsRadiologyComponentUvIps (preferred)
